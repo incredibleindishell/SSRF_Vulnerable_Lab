@@ -1,0 +1,115 @@
+body {
+	background: url(images/head.jpg);
+	background-size: 100% 700px;
+    background-repeat: no-repeat;
+font-family: Tahoma;
+color: white;
+
+}
+.side-pan {
+   margin: 0;
+   border:0px;
+   
+   width:200px;
+   padding: 5px 23px;
+   margin:0px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+   border-bottom: 1px solid black;
+   color: white;
+   font-size: 20px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: left;
+   align:left;
+   }
+   div#left {
+    width: 100%;
+    height: 50px;
+    float: left;
+	}
+div#right {
+    margin-left: 20%;
+    height: 50px;
+	color: white;
+    font-size: 20px;
+    font-family: Georgia, serif;
+	}
+.main div {
+  float: left;
+  clear: none; 
+	}
+
+input {
+border			: solid 2px ;
+border-color		: black;
+BACKGROUND-COLOR: #444444;
+font: 8pt Verdana;
+color: white;
+}
+submit {
+BORDER:  buttonhighlight 2px outset;
+BACKGROUND-COLOR: Black;
+width: 30%;
+color: #FFF;
+}
+#t input[type=\'submit\']{
+	COLOR: White;
+	border:none;
+	BACKGROUND-COLOR: black;
+}
+#t input[type=\'submit\']:hover {
+	
+	BACKGROUND-COLOR: #ff9933;
+	color: black;
+	
+}
+tr {
+BORDER: dashed 1px #333;
+color: #FFF;
+}
+td {
+BORDER: dashed 0px ;
+}
+.table1 {
+BORDER: 0px Black;
+BACKGROUND-COLOR: Black;
+color: #FFF;
+}
+.td1 {
+BORDER: 0px;
+BORDER-COLOR: #333333;
+font: 7pt Verdana;
+color: Green;
+}
+.tr1 {
+BORDER: 0px;
+BORDER-COLOR: #333333;
+color: #FFF;
+}
+table {
+BORDER: dashed 2px #333;
+BORDER-COLOR: #333333;
+BACKGROUND-COLOR: #191919;;
+color: #FFF;
+}
+textarea {
+border			: dashed 2px #333;
+BACKGROUND-COLOR: Black;
+font: Fixedsys bold;
+color: #999;
+}
+A:link {
+border: 1px;
+	COLOR: red; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: red; TEXT-DECORATION: none
+}
+A:hover {
+	color: White; TEXT-DECORATION: none
+}
+A:active {
+	color: white; TEXT-DECORATION: none
+}
