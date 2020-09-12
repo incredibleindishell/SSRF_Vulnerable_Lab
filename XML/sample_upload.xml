@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+ <crew>
+   <member id="member1">
+      <name>Edward Newgate</name>
+      <title>Captain</title>
+      <fruit>Gura-Gura no-mi</fruit>
+      <power>A "Quake Man".</power>
+   </member>
+   <member id="member2">
+	  <name>Marco - The Phoenix</name>
+      <title>First Division Commander</title>
+      <fruit>Mythical Zoan type</fruit>
+      <power>Can transform into a phoenix.</power>
+   </member>
+   <member id="member3">
+	  <name>Fire fist - Ace </name>
+      <title>Second Division Commander</title>
+      <fruit>Mera Mera no Mi</fruit>
+      <power>Can create, control, and transform into fire at will.</power>
+   </member>
+</crew>
