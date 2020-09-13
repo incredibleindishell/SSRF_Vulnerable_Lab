@@ -9,7 +9,7 @@ echo '
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <STYLE>
 body {
-	background: url(indishell.jpg);
+	background: url(images/indishell.jpg);
 	background-size: 100% 650px;
     background-repeat: no-repeat;
 	background-attachment: fixed;
