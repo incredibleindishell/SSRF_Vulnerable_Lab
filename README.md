@@ -54,7 +54,7 @@ In this case, DNS based spoofing trick will also not work to access the content 
 
 <a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/DNS%20Rebinding%20based%20Bypass">Guide to Exploitation of Scenario 5</a>
 
-<b> 6. SSRF in HTML to PDF generator script
+<b> 6. SSRF in HTML to PDF generator script</b>
 
 This the scenrio of the web app which is using HTML to PDF generator script and passing untrusted user supplied data to HTML file which is processed by HTML to PDF generator.
 
