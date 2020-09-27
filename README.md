@@ -3,7 +3,7 @@ This repository contain PHP codes which are vulnerable to Server-Side Request Fo
 
 I would like to say Thank You to @albinowax, AKReddy, Vivek Sir (For being great personalities who always supported me), Andrew Sir - @vanderaj (for his encouraging words) and those researchers who contirubuted in DNS rebinding attack based research 
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/images/ssrf_lab.gif?raw=true)
+![](https://raw.githubusercontent.com/incredibleindishell/SSRF_Vulnerable_Lab/master/images/SSRF_Vulnerable_Lab.png)
 
 Vulnerable codes are meant to demonstrate SSRF for below mentioned 5 scenarios:
 
@@ -54,6 +54,11 @@ In this case, DNS based spoofing trick will also not work to access the content 
 
 <a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/DNS%20Rebinding%20based%20Bypass">Guide to Exploitation of Scenario 5</a>
 
+<b> 6. SSRF in HTML to PDF generator script
+
+This the scenrio of the web app which is using HTML to PDF generator script and passing untrusted user supplied data to HTML file which is processed by HTML to PDF generator.
+
+<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_Lab/blob/master/pdf_generator/">Guide to Exploitation of Scenario 6</a>
 
 Ofcourse,<br><b>--==[[ With Love From IndiShell ]]==--</b> <img src="https://web.archive.org/web/20140704135452/freesmileys.org/smileys/smiley-flag010.gif">
 
@@ -68,6 +73,6 @@ Ofcourse,<br><b>--==[[ With Love From IndiShell ]]==--</b> <img src="https://web
 
 --==[[Love to]]==--
 
-	My Father, my Ex Teacher, cold fire hacker, Mannu, ViKi, Ashu bhai ji, Soldier Of God, Bhuppi, Gujjar PCP
-	Mohit, Ffe, Shardhanand, Budhaoo, Jagriti, Hacker fantastic, Jennifer Arcuri, Thecolonial, Anurag Bhai Ji and Don(Deepika kaushik)
+	My Father, my Ex Teacher, Lovey, cold fire hacker, Mannu, ViKi, Ashu bhai ji, Soldier Of God, Bhuppi, Gujjar PCP
+	Mohit, Ffe, Shardhanand, Budhaoo, Hacker fantastic, Jennifer Arcuri, Thecolonial, Anurag Bhai Ji and Don(Deepika kaushik)
 
