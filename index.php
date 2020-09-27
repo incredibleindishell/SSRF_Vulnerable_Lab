@@ -139,3 +139,18 @@ Application has implemented black listing of not just internal and private range
 In this case, DNS based spoofing trick will also not work to access the content hosted on internal/Reserved IP. Application code perform domain resolution to its IP and again perform black listed IP check for the resolved IP.
 </div></td></tr>
 <tr><td>Link to Vulnerable Script - <a href="dns_rebinding.php" target="_blank">dns_rebinding.php</a></td></tr></table>
+
+
+<br><br>
+<table width="90%"><tr><td>
+<b><font color=#ff9933 size="3">6. SSRF in HTML to PDF generator: -</font></b></td></tr>
+<tr><td style="background-color: #343440;">
+<div align=center>--== <a href="#" onclick="lhook('info6');" style="border:1px;background:black;">Show Misconfiguration Info</a> ==--
+</div>
+
+
+<div id="info6" style="display:none;">
+This the scenario of the web app which is using HTML to PDF generator script and passing untrusted user supplied data to HTML file which is processed by HTML to PDF generator. 
+An attacker can pass the HTML tags such as &#x3C;iframe&#x3E;, &#x3C;a&#x3E;, &#x3C;img&#x3E; or HTML forms to make request to internally hosted application. 	
+</div></td></tr>
+<tr><td>Link to Vulnerable Script 1 - <a href="pdf_ssrf_weasyprint.php" target="_blank">pdf_ssrf_weasyprint.php</a><br>Link to Vulnerable Script 2 - <a href="pdf_ssrf_wkhtmltopdf.php" target="_blank">pdf_ssrf_wkhtmltopdf.php</a></td></tr></table>
