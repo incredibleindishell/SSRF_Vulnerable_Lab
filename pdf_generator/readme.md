@@ -21,7 +21,7 @@ We have scenarios of 2 "HTML to PDF generator" which allow an attacker to exploi
     2. Web server with PHP support 
 
 <b>1.2.1 Linux based setup: wkhtmltopdf</b>
-<br>No change is required. This scripts are developed to work on Linux OS. 
+<br>No change is required. This script is developed to work on Linux OS. 
 
 <b>1.2.2 Windows based setup:</b>
 <br>Below mentioned changes will be required:
