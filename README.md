@@ -76,3 +76,10 @@ Ofcourse,<br><b>--==[[ With Love From IndiShell ]]==--</b> <img src="https://web
 	My Father, my Ex Teacher, Lovey, cold fire hacker, Mannu, ViKi, Ashu bhai ji, Soldier Of God, Bhuppi, Gujjar PCP
 	Mohit, Ffe, Shardhanand, Budhaoo, Hacker fantastic, Jennifer Arcuri, Thecolonial, Anurag Bhai Ji and Don(Deepika kaushik)
 
+
+## Docker
+There is a [Dockerfile](./Dockerfile) in this repo that will spin up a vulnerable [docker](https://docker.com) image.
+To build it, simply run `docker build -t <tag> .`.
+The Apache server is running on port 80 inside the container.
+Expose it with the `-p` flag.
+Running it with `docker run -p 9000:80 <tag>` will bring up a container listening on [localhost:9000](http://localhost:9000).
