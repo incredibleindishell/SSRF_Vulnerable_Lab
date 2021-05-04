@@ -3,7 +3,7 @@ This repository contain PHP codes which are vulnerable to Server-Side Request Fo
 
 I would like to say Thank You to @albinowax, AKReddy, Vivek Sir (For being great personalities who always supported me), Andrew Sir - @vanderaj (for his encouraging words) and those researchers who contirubuted in DNS rebinding attack based research 
 
-![](https://raw.githubusercontent.com/incredibleindishell/SSRF_Vulnerable_Lab/master/images/SSRF_Vulnerable_Lab.png)
+![](https://raw.githubusercontent.com/incredibleindishell/SSRF_Vulnerable_Lab/master/www/images/SSRF_Vulnerable_Lab.png)
 
 Vulnerable codes are meant to demonstrate SSRF for below mentioned 5 scenarios:
 
