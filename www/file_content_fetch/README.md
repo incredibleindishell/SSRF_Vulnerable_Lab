@@ -17,22 +17,22 @@ work and SSRF vulnerability exploitation is not possible.
 In this example, application has functionality to fetch and display the content of the file. 
 Application has file "local.txt" hosted in the same directory where SSRF vulnerable code is hosted.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/file_content_fetch/images/file1.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/file_content_fetch/images/file1.png?raw=true)
 
 When user try to read the content of file saved on server, vulnerable code just check if file exist on server or not and display the content if file is present on server.
 
 Application is displaying the content of the file "local.txt"
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/file_content_fetch/images/file2.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/file_content_fetch/images/file2.png?raw=true)
 
 Vulnerable code allow user to use "file://" scheme as well. For example, user can read file like "/etc/passwd" (Linux server) or "c:/windows/system32/drivers/etc/hosts" (in Windows server).
 
 Accessing Windows machine "host" entry file
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/file_content_fetch/images/file3.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/file_content_fetch/images/file3.png?raw=true)
 
 Vulnerable code allowed user to access the content of "host" file
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/file_content_fetch/images/file4.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/file_content_fetch/images/file4.png?raw=true)
 
 
 <h4><b>Accessing the internal server URLs</b></h4>
@@ -45,6 +45,6 @@ User specified the URL "http://localhost/box.txt" which point to the file "box.t
 
 Vulnerable code allowed user to access the HTTP content of the URL "http://localhost/box.txt"
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/file_content_fetch/images/file6.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/file_content_fetch/images/file6.png?raw=true)
 
 ./Thanks
