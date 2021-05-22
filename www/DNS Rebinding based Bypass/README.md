@@ -17,29 +17,29 @@ In this example, application has functionality to fetch and display the content 
 <h4><b>Web application default functionality</b></h4>
 Application code allow a user to fetch the content of remotly hosted file from an IP or Domain. 
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_1.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_1.png?raw=true)
 
 Application perform check if specified domain or IP is in blacklist or not. If Domain is not black listed, application fetch and serve the content of the remote URL.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_2.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_2.png?raw=true)
 
 Application do not allow user to fetch the content from Internal/Reserved IP range. When user try to access the files hosted on internal IP, code perform check.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_3.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_3.png?raw=true)
 
 Request will net get processed if user specified IP found in blacklist.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_4.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_4.png?raw=true)
 
 Application do not relaying on IP based check. It also perform check to which IP user specified Domain name is pointing to.
 In this case, Domain name "b0x.mannulinux.org" is pointing to IP "127.0.0.1"
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_5.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_5.png?raw=true)
 
 User trying to access the content of the file hosted on URL "127.0.0.1/box.txt" by trying DNS based Spoofing trick and ask application to fetch the content from URL "b0x.mannulinux.org". As, "b0x.mannulinux.org" is pointing to "127.0.0.1", the URL "b0x.mannulinux.org/box.txt" pointing to "127.0.0.1/box.txt"
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_6.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_6.png?raw=true)
 
 Application code resolved the user specified Domain name to the IP and blacked the processing because resolved IP is in blacklist. 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_7.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_7.png?raw=true)
 
 
 <h4><b>DNS Rebind Technique</b></h4>
@@ -52,7 +52,7 @@ When user specify the web application sub-domain entry, user can specify the "TT
 
 Here, attacker will configure the both the IPs of Sub-Domain/Domain with "TTL" 1 minute. Now, DNS will server different-2 IP when web server is going to make request after difference of 1 minute due to the "TTL" and 2 IPs binded to it.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_13.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_13.png?raw=true)
 
 This behavior will help in bypassing the security check in the code. Application code has 2 different code sections:
   1) Application first code section is meant for performing the check if IP/Domain is in blacklist or not. If IP or Domain IP resloved, is in blacklist, application will stop the further processing.
@@ -75,6 +75,6 @@ This behavior will help in bypassing the security check in the code. Application
  
  -> Data fetching functiona will resolve the IP of the Domain and get the blacklisted IP (127.0.0.1). As now, security check has been passed, application wont stop processing and will fetch the content from the blacklisted IP.
  
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_12.png?raw=true) 
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/DNS%20Rebinding%20based%20Bypass/images/DNS_Rebinding_Attack_12.png?raw=true) 
 
 ./thanks
