@@ -58,11 +58,11 @@ Let's start with exploitation and possible attack vectors to perform SSRF.
 <b>2.1 SSRF in Weasyprint HTML to PDF generator</b>
 
 Web application accepting user input via GUI.<br>  
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/w1.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/w1.png?raw=true)
 
 Accepted the user input, placed it inside the HTML code and generated PDF by rendering the HTML code 
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/w2.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/w2.png?raw=true)
 
 After observing such behavior, try with following payloads to confirm whether web application code is vulnerable:
 
@@ -95,13 +95,13 @@ Below mentioned payload will grab and attach the HTTP response from the above me
 
 Open the generated PDF and observe, nothing is there in customer name column. Download the generated PDF file to extract the data from it.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/w4.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/w4.png?raw=true)
 
-Extract the attached content from the downloaded PDF file using this Python <a href="https://github.com/incredibleindishell/SSRF_Vulnerable_Lab/blob/master/pdf_generator/weasy.py">Script</a> developed by Ben AKA Nahamsec. 
+Extract the attached content from the downloaded PDF file using this Python <a href="https://github.com/incredibleindishell/SSRF_Vulnerable_Lab/blob/master/www/pdf_generator/weasy.py">Script</a> developed by Ben AKA Nahamsec. 
 
     python script.py  downloaded_file.pdf
   
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/w5.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/w5.png?raw=true)
 
 And Python script extracted the attached HTTP response from the Internal Metadata URL.
 
@@ -112,10 +112,10 @@ This is how an attacker can extract the HTTP response from other internal IPs/Ho
 An attacker can exploit SSRF in web application using wkhtmltopdf to generate the PDF from HTML having untrusted user supplied data placed in it. 
 
 Web application is accepting user supplied data 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/wk1.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/wk1.png?raw=true)
 
 Generated PDF has user supplied data.
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/wk2.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/wk2.png?raw=true)
 
 Payload to load internal app rendered HTTP response inside the PDF using <iframe> HTML tag is:
     
@@ -126,10 +126,10 @@ Payload to load internal app rendered HTTP response inside the PDF using <iframe
     <body onload="document.createElement('form').submit.call(document.getElementById('myForm'))"><form id="myForm" name="myForm" action="http://internal_app" method=GET></form></body> 
 
 Specify the above mentioned payload and submit the form
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/wk3.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/wk3.png?raw=true)
 
 Open the generated the PDF and there we go....
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/pdf_generator/images/wk4.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/pdf_generator/images/wk4.png?raw=true)
 
 
 ./Thanks
