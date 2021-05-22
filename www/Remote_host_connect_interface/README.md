@@ -16,7 +16,7 @@ This behaviour can be exploited to perform internal network scanning not just to
 
 In this example, script try to connect to remote SQL server. 
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/Remote_host_connect_interface/images/MySQL_Connect_1.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/Remote_host_connect_interface/images/MySQL_Connect_1.png?raw=true)
 
 Following 3 type of behavior will be obsered in this case whicn are following:
 
@@ -30,11 +30,11 @@ In this case, remote IP is up and port is open. So when application try to commu
 
 Specified the SMB port along local IP
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/Remote_host_connect_interface/images/MySQL_Connect_2.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/Remote_host_connect_interface/images/MySQL_Connect_2.png?raw=true)
 
 Application vulnerable code response will print message "Service Gone" which indicate "SMB" port was open on local machine.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/Remote_host_connect_interface/images/MySQL_Connect_3.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/Remote_host_connect_interface/images/MySQL_Connect_3.png?raw=true)
 
 <b>Case 2: IP is live and Port is Closed</b>
 
@@ -42,11 +42,11 @@ In this case, remote IP is up but port is closed. So when application try to com
 
 Specified the random port which is not open along local IP
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/Remote_host_connect_interface/images/MySQL_Connect_4.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/Remote_host_connect_interface/images/MySQL_Connect_4.png?raw=true)
 
 Application vulnerable code response indicate that random port was not open on local machine.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/Remote_host_connect_interface/images/MySQL_Connect_5.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/Remote_host_connect_interface/images/MySQL_Connect_5.png?raw=true)
 
 <b>Case 3: IP is not live </b>
 
@@ -54,11 +54,11 @@ In this case, remote IP itself is not live. So when application try to communica
 
 Specified the SMB port along remote IP which is not live on network
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/Remote_host_connect_interface/images/MySQL_Connect_6.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/Remote_host_connect_interface/images/MySQL_Connect_6.png?raw=true)
 
 Application vulnerable code response indicate that Remote IP is not live.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/Remote_host_connect_interface/images/MySQL_Connect_7.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/Remote_host_connect_interface/images/MySQL_Connect_7.png?raw=true)
 
 ./Thanks
 
