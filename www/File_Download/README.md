@@ -32,11 +32,11 @@ To get the time difference for the case when IP itself is not live, specify an I
 <h4><b>Web application default functionality</b></h4>
 Web application has file download functionality which allow user to download file from server. If file is not present, application prompt with error message that "File not found". 
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_1.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_1.png?raw=true)
 
 Web browser prompt user with file donwload message box
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_2.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_2.png?raw=true)
 
 Confirm whether application is prepending any data to user specified value or not because it is important to perform SSRF exploitation. If application is prepending any data to user input, application will not accept full path to the system internal file and user will not get any file download message box.
 
@@ -44,11 +44,11 @@ To confirm if application is not prepending any data to user input, try to downl
 
 Specified the internal path to file "hosts" in inout field which is "c:/windows/system32/drivers/etc/hosts" and try to download.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_3.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_3.png?raw=true)
 
 Application is processing user specified file path and not prepending any data to it.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_4.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_4.png?raw=true)
 
 Now, we can go for the exploitation. An attacker can specify the SMB path to internal IP with "IPC$" admin share and random file name inside the share. 
 
@@ -59,11 +59,11 @@ Specify the SMB path to an IP which has Windows OS runnning on it. In the enviro
 
 IP of the machine which is hosted inside the network and has SMB port on it.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_8.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_8.png?raw=true)
 
 Web application response time behavior for the case when IP is live and port 445 is open was osbeerved like this
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_9.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_9.png?raw=true)
 
 <b>Case 2: IP is Live but port is closed</b>
 
@@ -71,11 +71,11 @@ In network, there may be IPs which are live but SMB port is not live. For those 
 
 There was an IP which is Live and running Linux OS with SMB port closed.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_10.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_10.png?raw=true)
 
 Web application response time behavior for the case when IP is live and port 445 is cloased was observed like this
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_11.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_11.png?raw=true)
 
 
 <b>Case 3: IP itself is not live</b>
@@ -84,10 +84,10 @@ In network, there may be IPs which are not live. For those IPs, application resp
 
 There was an IP which as not Live in the environment.
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_6.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_6.png?raw=true)
 
 Web application response time behavior for the case when IP is not live was observed like this
 
-![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/File_Download/images/file_download_7.png?raw=true)
+![](https://github.com/incredibleindishell/SSRF_Vulnerable_lab/blob/master/www/File_Download/images/file_download_7.png?raw=true)
 
 ./Thanks
