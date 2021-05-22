@@ -17,7 +17,7 @@ In this case, these data fetching function can process the schemes like "http://
 
 In case if application is prepending any data string (for example any directory name) to user data, "http://" or "file://" scheme won't work and exploitation of SSRF vulnerability is not possible.
 
-<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/file_content_fetch">Guide to Exploitation of Scenario 1</a>
+<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/www/file_content_fetch">Guide to Exploitation of Scenario 1</a>
 
 <b> 2. Application provides interface to connect to Remote Host</b>
 
@@ -27,7 +27,7 @@ Application expects user to specify the remote server hostname/IP, username and 
 
 This behaviour can be exploited to perform internal network scanning not just to enumerate IPs but Ports as well on those live IPs.
 
-<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/Remote_host_connect_interface">Guide to Exploitation of Scenario 2</a>
+<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/www/Remote_host_connect_interface">Guide to Exploitation of Scenario 2</a>
 
 <b> 3. Application with File Download Functionality</b>
 
@@ -36,7 +36,7 @@ The function which performs the task of downloading file from server, can downlo
 
 Web application hosted on Windows OS will process the SMB path as well if file download functionality is processing user input without prepending any data.
 
-<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/File_Download">Guide to Exploitation of Scenario 3</a>
+<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/www/File_Download">Guide to Exploitation of Scenario 3</a>
 
 <b> 4. Bypassing IP blacklisting using DNS Based Spoofing</b>
 
@@ -44,7 +44,7 @@ The script has funcionality which allow user to fetch data from remote URL. User
 
 The script perform check if user has specified the input as "localhost", "Internal IPs" or "Reserved IPs". If domain/IP specified by user is blacklisted, script will not fetch the content and stop processing. 
 
-<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/DNS-Spoofing-based-Bypass">Guide to Exploitation of Scenario 4</a>
+<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/www/DNS-Spoofing-based-Bypass">Guide to Exploitation of Scenario 4</a>
 
 <b> 5. Bypassing IP blacklisting using DNS Rebinding Technique</b>
 
@@ -52,13 +52,13 @@ Application has implemented black listing of not just internal and private range
 
 In this case, DNS based spoofing trick will also not work to access the content hosted on internal/Reserved IP. Application code perform domain resolution to its IP and again perform black listed IP check for the resolved IP. 
 
-<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/DNS%20Rebinding%20based%20Bypass">Guide to Exploitation of Scenario 5</a>
+<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_lab/tree/master/www/DNS%20Rebinding%20based%20Bypass">Guide to Exploitation of Scenario 5</a>
 
 <b> 6. SSRF in HTML to PDF generator script</b>
 
 This the scenrio of the web app which is using HTML to PDF generator script and passing untrusted user supplied data to HTML file which is processed by HTML to PDF generator.
 
-<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_Lab/blob/master/pdf_generator/">Guide to Exploitation of Scenario 6</a>
+<a href="https://github.com/incredibleindishell/SSRF_Vulnerable_Lab/blob/master/www/pdf_generator/">Guide to Exploitation of Scenario 6</a>
 
 Ofcourse,<br><b>--==[[ With Love From IndiShell ]]==--</b> <img src="https://web.archive.org/web/20140704135452/freesmileys.org/smileys/smiley-flag010.gif">
 
