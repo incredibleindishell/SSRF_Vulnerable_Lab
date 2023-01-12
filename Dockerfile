@@ -1,12 +1,13 @@
-FROM php:7.4.18-apache-buster
-LABEL author="Jonathan Cooper <https://joncooperworks.com>"
+FROM php:7.2-apache
 
-RUN apt-get update && apt-get -y upgrade
+RUN apt update && apt install -y xvfb libfontconfig wkhtmltopdf build-essential python-dev python-pip python-cffi libcairo2 libpango1.0-0 libpangocairo-1.0.0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info && python2 -m pip install "weasyprint<43"
 
-# Expose apache.
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable mysqli 
+RUN  chown www-data:www-data /var/www/html/
+
+ADD www /var/www/html/
+
+
 EXPOSE 80
-
-# Copy this repo into place.
-ADD www /var/www/html
-
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["apache2ctl", "-D", "FOREGROUND"]
