@@ -1,0 +1,31 @@
+
+
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+
+        root /usr/share/nginx/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                
+
+                resolver 8.8.8.8;
+                        default_type "";
+                        if ($http_host != $server_addr)
+                                {
+
+                                        proxy_pass $scheme://$http_host$uri$is_args$args;
+                                }
+
+        }
+
+     
+}
+
+
