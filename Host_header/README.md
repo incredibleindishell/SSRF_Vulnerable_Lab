@@ -1,4 +1,6 @@
-Description: This is a Host-header based SSRF example. In this type of SSRF, any IP/Hostname entered in the host header is parsed by the vulnerable server.
+### Description: 
+
+This is a Host-header based SSRF example. In this type of SSRF, any IP/Hostname entered in the host header is parsed by the vulnerable server.
 The vunerable server ends up routing the request to the specified domain/IP and retrieves the contents, returning them in the HTTP response. This type of misconfiguration can easily be exploited to exfiltrate data from sensitive locations (e.g. Internal locations, AWS metadata, local files, etc.)
 
 This misconfiguration is usually seen in web servers that act like a proxy, such as Squid proxy, Nginx and Apache.
